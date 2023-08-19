@@ -14,11 +14,7 @@ function BlogItem({ products, dinWords }) {
   const words = dinWords.blogItem;
   return (
     <>
-      <img
-        src="./xari-bulbul/data/bg/bg_right.png"
-        className="bg_right"
-        alt=""
-      />
+      <img src="./data/bg/bg_right.png" className="bg_right" alt="" />
       <div className="container">
         <h1 className="blog_item_title">{words.title}</h1>
         <div className="wedding1">
@@ -30,19 +26,19 @@ function BlogItem({ products, dinWords }) {
             <p>{words.last}</p>
           </div>
           <div className="wedding1_img">
-            <img src="./xari-bulbul/data/blog_item/blog_item1.png" alt="" />
+            <img src="./data/blog_item/blog_item1.png" alt="" />
           </div>
         </div>
         <div className="bride">
           <h2>{words.baku}</h2>
           <p>{words.we}</p>
           <img
-            src="./xari-bulbul/data/homeImages/left_top.png"
+            src="./data/homeImages/left_top.png"
             className="bride_left"
             alt=""
           />
           <img
-            src="./xari-bulbul/data/homeImages/right_down.png"
+            src="./data/homeImages/right_down.png"
             className="bride_right"
             alt=""
           />
@@ -64,7 +60,7 @@ function BlogItem({ products, dinWords }) {
             </div>
           </div>
           <img
-            src="./xari-bulbul/data/blog_item/bride.png"
+            src="./data/blog_item/bride.png"
             className="bride_buy_img"
             alt=""
           />
@@ -91,8 +87,7 @@ function BlogItem({ products, dinWords }) {
             <h2>{words.withFlowers}</h2>
           </div>
           <Link to="/catalog">
-            {words.catalog}{" "}
-            <img src="./xari-bulbul/icons/arrow_right.svg" alt="" />
+            {words.catalog} <img src="./icons/arrow_right.svg" alt="" />
           </Link>
         </div>
         <div className="products">
@@ -105,8 +100,7 @@ function BlogItem({ products, dinWords }) {
           })}
         </div>
         <Link to="/catalog">
-          {words.catalog}{" "}
-          <img src="./xari-bulbul/icons/arrow_right.svg" alt="" />
+          {words.catalog} <img src="./icons/arrow_right.svg" alt="" />
         </Link>
       </div>
       <HowWork />

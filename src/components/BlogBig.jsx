@@ -8,7 +8,7 @@ function BlogBig({ dinWords }) {
   return (
     <div className="blog_big">
       <Link className="blog_big_img" to="/blog-item">
-        <img src="./xari-bulbul/data/blog/blog_big.png" alt="" />
+        <img src="./data/blog/blog_big.png" alt="" />
       </Link>
       <div className="blog_big_text">
         <h2>{words.bigH2}</h2>

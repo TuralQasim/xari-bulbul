@@ -11,7 +11,7 @@ const AccordionList = ({ data, words }) => {
         open={open}
         details={data.consist}
         onChange={setOpen}
-        imgSrc={"./xari-bulbul/icons/consist.svg"}
+        imgSrc={"./icons/consist.svg"}
       />
       <Accordion
         title="Доставка"
@@ -19,7 +19,7 @@ const AccordionList = ({ data, words }) => {
         open={open}
         details={words.details1}
         onChange={setOpen}
-        imgSrc={"./xari-bulbul/icons/consist.svg"}
+        imgSrc={"./icons/consist.svg"}
       />
       <Accordion
         title="Оплата"
@@ -27,7 +27,7 @@ const AccordionList = ({ data, words }) => {
         open={open}
         details={words.details2}
         onChange={setOpen}
-        imgSrc={"./xari-bulbul/icons/consist.svg"}
+        imgSrc={"./icons/consist.svg"}
       />
       <Accordion
         words={words}
@@ -35,7 +35,7 @@ const AccordionList = ({ data, words }) => {
         open={open}
         details={words.details3}
         onChange={setOpen}
-        imgSrc={"./xari-bulbul/icons/consist.svg"}
+        imgSrc={"./icons/consist.svg"}
       />
     </>
   );

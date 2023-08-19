@@ -51,7 +51,7 @@ function Login({ users, dinWords }) {
               onChange={changePass}
               placeholder={words.passPlace}
             />
-            <img src="./xari-bulbul/icons/pass.svg" alt="" />
+            <img src="./icons/pass.svg" alt="" />
           </label>
           <div className="forgot_save">
             <h4>{words.forgot}</h4>
@@ -67,7 +67,7 @@ function Login({ users, dinWords }) {
             {words.logBtn}
           </button>
           <img
-            src="./xari-bulbul/data/homeImages/left_top.png"
+            src="./data/homeImages/left_top.png"
             alt=""
             className="login_bg"
           />

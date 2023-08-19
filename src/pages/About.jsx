@@ -13,11 +13,7 @@ function About({ products, dinWords }) {
   const words = dinWords.about;
   return (
     <>
-      <img
-        src="./xari-bulbul/data/bg/bg_right.png"
-        className="bg_right"
-        alt=""
-      />
+      <img src="./data/bg/bg_right.png" className="bg_right" alt="" />
       <div className="container">
         <h2 className="about_title">{words.aboutTitle}</h2>
         <div className="about">
@@ -29,14 +25,14 @@ function About({ products, dinWords }) {
               <p>{words.care}</p>
             </div>
             <img
-              src="./xari-bulbul/data/about/about2.png"
+              src="./data/about/about2.png"
               className="about_left_img"
               alt=""
             />
           </div>
           <div className="about_right">
             <img
-              src="./xari-bulbul/data/about/about1.png"
+              src="./data/about/about1.png"
               className="about_right_img"
               alt=""
             />
@@ -57,8 +53,7 @@ function About({ products, dinWords }) {
             <h2>{words.withFlower}</h2>
           </div>
           <Link to="/catalog">
-            {words.toCatalog}{" "}
-            <img src="./xari-bulbul/icons/arrow_right.svg" alt="" />
+            {words.toCatalog} <img src="./icons/arrow_right.svg" alt="" />
           </Link>
         </div>
         <div className="products">
@@ -67,8 +62,7 @@ function About({ products, dinWords }) {
           })}
         </div>
         <Link to="/catalog">
-          {words.toCatalog}{" "}
-          <img src="./xari-bulbul/icons/arrow_right.svg" alt="" />
+          {words.toCatalog} <img src="./icons/arrow_right.svg" alt="" />
         </Link>
       </div>
       <Map />

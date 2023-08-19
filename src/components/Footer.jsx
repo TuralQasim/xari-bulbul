@@ -41,8 +41,8 @@ function Footer({ categories, staticWords, language }) {
             >
               <GrFormClose onClick={() => setFootModal(false)} />
               <h2>Спасибо. Мы скоро свяжемся с вами</h2>
-              <img src="./xari-bulbul/data/homeImages/left_top.png" alt="" />
-              <img src="./xari-bulbul/data/homeImages/right_down.png" alt="" />
+              <img src="./data/homeImages/left_top.png" alt="" />
+              <img src="./data/homeImages/right_down.png" alt="" />
             </motion.div>
           </AnimatePresence>
         </div>
@@ -50,19 +50,19 @@ function Footer({ categories, staticWords, language }) {
       <div className="container">
         <footer>
           <div className="foot_1">
-            <img src="./xari-bulbul/icons/logo1.png" alt="" />
+            <img src="./icons/logo1.png" alt="" />
             <div className="foot_480">
               <div className="foot_contact">
                 <div className="foot_contact_item">
-                  <img src="./xari-bulbul/icons/phone.svg" alt="" />
+                  <img src="./icons/phone.svg" alt="" />
                   <Link to="tel:0516830063">0516830063</Link>
                 </div>
                 <div className="foot_contact_item">
-                  <img src="./xari-bulbul/icons/phone.svg" alt="" />
+                  <img src="./icons/phone.svg" alt="" />
                   <Link to="tel:0516830063">0516830063</Link>
                 </div>
                 <div className="foot_contact_item">
-                  <img src="./xari-bulbul/icons/phone.svg" alt="" />
+                  <img src="./icons/phone.svg" alt="" />
                   <Link to="tel:0516830063">0516830063</Link>
                 </div>
               </div>
@@ -77,16 +77,16 @@ function Footer({ categories, staticWords, language }) {
             </div>
             <div className="foot_icons">
               <Link>
-                <img src="./xari-bulbul/icons/white_instagram.svg" alt="" />
+                <img src="./icons/white_instagram.svg" alt="" />
               </Link>
               <Link>
-                <img src="./xari-bulbul/icons/white_vkontakte.svg" alt="" />
+                <img src="./icons/white_vkontakte.svg" alt="" />
               </Link>
               <Link>
-                <img src="./xari-bulbul/icons/white_telegram.svg" alt="" />
+                <img src="./icons/white_telegram.svg" alt="" />
               </Link>
               <Link>
-                <img src="./xari-bulbul/icons/white_whatsapp.svg" alt="" />
+                <img src="./icons/white_whatsapp.svg" alt="" />
               </Link>
             </div>
           </div>
@@ -159,16 +159,16 @@ function Footer({ categories, staticWords, language }) {
         <div className="follow">
           <div className="foot_icons">
             <Link>
-              <img src="./xari-bulbul/icons/white_instagram.svg" alt="" />
+              <img src="./icons/white_instagram.svg" alt="" />
             </Link>
             <Link>
-              <img src="./xari-bulbul/icons/white_vkontakte.svg" alt="" />
+              <img src="./icons/white_vkontakte.svg" alt="" />
             </Link>
             <Link>
-              <img src="./xari-bulbul/icons/white_telegram.svg" alt="" />
+              <img src="./icons/white_telegram.svg" alt="" />
             </Link>
             <Link>
-              <img src="./xari-bulbul/icons/white_whatsapp.svg" alt="" />
+              <img src="./icons/white_whatsapp.svg" alt="" />
             </Link>
           </div>
           <form>

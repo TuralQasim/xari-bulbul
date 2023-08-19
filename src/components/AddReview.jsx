@@ -196,7 +196,7 @@ function AddReview({ id, reviewModal, dispatch, dinWords }) {
           <div className="add_img_hero">
             <div className="file_input">
               <input type="file" onChange={(e) => convertToBase64(e)} />
-              <img src="./xari-bulbul/icons/camera.svg" alt="" />
+              <img src="./icons/camera.svg" alt="" />
             </div>
             <div className={fileImages1 ? "img_box" : "img_box orderminus"}>
               {fileImages1 ? (

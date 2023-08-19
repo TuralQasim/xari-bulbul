@@ -10,7 +10,7 @@ import ScroolToTop from "./components/ScroolToTop";
 
 ReactDOM.createRoot(document.getElementById("root")).render(
   <Provider store={store}>
-    <Router>
+    <Router basename="xari-bulbul">
       <ScroolToTop />
       <App />
     </Router>

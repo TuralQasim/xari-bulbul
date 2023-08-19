@@ -3,7 +3,7 @@ import { connect } from "react-redux";
 function Loading() {
   return (
     <div className="loading_gif">
-      <img src="./xari-bulbul/data/loading.gif" alt="" />
+      <img src="./data/loading.gif" alt="" />
     </div>
   );
 }
