@@ -68,7 +68,11 @@ function Details({
   };
   return (
     <>
-      <img src="/data/bg/bg_right.png" className="bg_right" alt="" />
+      <img
+        src="./xari-bulbul/data/bg/bg_right.png"
+        className="bg_right"
+        alt=""
+      />
       <div className="details container">
         <div className="details_slider">
           <ZoomSlider id={id} />
@@ -114,7 +118,7 @@ function Details({
               {inBasket ? `${words.inBasket}` : `${words.addBasket}`}
             </button>
             <button className="favBtn">
-              <img src="/icons/addFav.svg" alt="" />
+              <img src="./xari-bulbul/icons/addFav.svg" alt="" />
             </button>
           </div>
           <div className="oper_480">
@@ -126,16 +130,16 @@ function Details({
           <AccordionList data={data} words={words} />
           <div className="details_icons">
             <Link to="http/tiktok">
-              <img src="/icons/tiktokDetails.svg" alt="" />
+              <img src="./xari-bulbul/icons/tiktokDetails.svg" alt="" />
             </Link>
             <Link to="http/vk.ru">
-              <img src="/icons/vkDetails.svg" alt="" />
+              <img src="./xari-bulbul/icons/vkDetails.svg" alt="" />
             </Link>
             <Link to="http/youtube.com">
-              <img src="/icons/youtubeDetails.svg" alt="" />
+              <img src="./xari-bulbul/icons/youtubeDetails.svg" alt="" />
             </Link>
             <Link to="http/instagram.com">
-              <img src="/icons/instagramDetails.svg" alt="" />
+              <img src="./xari-bulbul/icons/instagramDetails.svg" alt="" />
             </Link>
           </div>
         </div>
@@ -146,7 +150,8 @@ function Details({
             <h2>{words.withFlower}</h2>
           </div>
           <Link to="/catalog">
-            {words.catalog} <img src="/icons/arrow_right.svg" alt="" />
+            {words.catalog}{" "}
+            <img src="./xari-bulbul/icons/arrow_right.svg" alt="" />
           </Link>
         </div>
         <div className="products">
@@ -155,7 +160,8 @@ function Details({
           })}
         </div>
         <Link to="/catalog">
-          {words.catalog} <img src="/icons/arrow_right.svg" alt="" />
+          {words.catalog}{" "}
+          <img src="./xari-bulbul/icons/arrow_right.svg" alt="" />
         </Link>
       </div>
       <Lider />

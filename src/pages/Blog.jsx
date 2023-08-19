@@ -10,7 +10,11 @@ function Blog({ dinWords }) {
   const words = dinWords.blog;
   return (
     <>
-      <img src="/data/bg/bg_right.png" className="bg_right" alt="" />
+      <img
+        src="./xari-bulbul/data/bg/bg_right.png"
+        className="bg_right"
+        alt=""
+      />
       <div className="container">
         <h2 className="blog_title">{words.title}</h2>
         <div className="blog">

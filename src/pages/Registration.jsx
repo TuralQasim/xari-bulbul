@@ -84,7 +84,7 @@ function Registration({ dinWords }) {
               onChange={changePass1}
               placeholder={words.passPlace1}
             />
-            <img src="/icons/pass.svg" alt="" />
+            <img src="./xari-bulbul/icons/pass.svg" alt="" />
           </label>
           <label>
             <input
@@ -93,7 +93,7 @@ function Registration({ dinWords }) {
               onChange={changePass2}
               placeholder={words.passPlace2}
             />
-            <img src="/icons/pass.svg" alt="" />
+            <img src="./xari-bulbul/icons/pass.svg" alt="" />
           </label>
           <input
             type="text"
@@ -111,7 +111,7 @@ function Registration({ dinWords }) {
             {words.reg}
           </div>
           <img
-            src="/data/homeImages/left_top.png"
+            src="./xari-bulbul/data/homeImages/left_top.png"
             alt=""
             className="login_bg"
           />

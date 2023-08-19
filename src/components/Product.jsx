@@ -42,7 +42,11 @@ function Product({ data, images, favorite, dispatch, basket, dinWords }) {
       <h3>{data?.price}</h3>
       <button className="add_fav" onClick={addToFav}>
         <img
-          src={inFav ? "/icons/field_heart.svg" : "/icons/empty_heart.svg"}
+          src={
+            inFav
+              ? "./xari-bulbul/icons/field_heart.svg"
+              : "./xari-bulbul/icons/empty_heart.svg"
+          }
           alt=""
         />
       </button>

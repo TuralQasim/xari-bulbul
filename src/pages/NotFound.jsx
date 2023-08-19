@@ -20,7 +20,7 @@ function NotFound({ dinWords }) {
           </div>
           <div className="not_found_img">
             <h1>404</h1>
-            <img src="/data/notFound/not_found.png" alt="" />
+            <img src="./xari-bulbul/data/notFound/not_found.png" alt="" />
           </div>
         </div>
       </div>

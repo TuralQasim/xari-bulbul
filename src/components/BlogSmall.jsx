@@ -8,7 +8,7 @@ function BlogSmall({ dinWords }) {
   return (
     <div className="blog_small">
       <Link className="blog_small_img" to="/blog-item">
-        <img src="/data/blog/blog_small.png" alt="" />
+        <img src="./xari-bulbul/data/blog/blog_small.png" alt="" />
       </Link>
       <div className="blog_small_text">
         <h2>{words.bigH2}</h2>

@@ -12,7 +12,8 @@ function Reviews({ reviews, dinWords }) {
       <div className="review_title container">
         <h2>{words.title}</h2>
         <Link to="/reviews">
-          {words.allReview} <img src="/icons/arrow_right.svg" alt="" />
+          {words.allReview}{" "}
+          <img src="./xari-bulbul/icons/arrow_right.svg" alt="" />
         </Link>
       </div>
       <div className="review_hero container">
@@ -28,7 +29,8 @@ function Reviews({ reviews, dinWords }) {
         })}
       </div>
       <Link to="/reviews">
-        {words.allReview} <img src="/icons/arrow_right.svg" alt="" />
+        {words.allReview}{" "}
+        <img src="./xari-bulbul/icons/arrow_right.svg" alt="" />
       </Link>
     </div>
   );

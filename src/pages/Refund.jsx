@@ -23,18 +23,30 @@ function Refund({ dinWords }) {
               </ul>
             </div>
             <img
-              src="/data/homeImages/left_top.png"
+              src="./xari-bulbul/data/homeImages/left_top.png"
               className="refund_left_top"
               alt=""
             />
             <img
-              src="/data/homeImages/right_down.png"
+              src="./xari-bulbul/data/homeImages/right_down.png"
               alt=""
               className="refund_right_down"
             />
-            <img src="/icons/spots.svg" className="spots1" alt="" />
-            <img src="/icons/spots.svg" className="spots2" alt="" />
-            <img src="/icons/spots.svg" className="spots3" alt="" />
+            <img
+              src="./xari-bulbul/icons/spots.svg"
+              className="spots1"
+              alt=""
+            />
+            <img
+              src="./xari-bulbul/icons/spots.svg"
+              className="spots2"
+              alt=""
+            />
+            <img
+              src="./xari-bulbul/icons/spots.svg"
+              className="spots3"
+              alt=""
+            />
           </div>
           <p>
             {words.returnMoney}

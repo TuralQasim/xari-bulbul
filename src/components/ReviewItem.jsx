@@ -6,7 +6,7 @@ function ReviewItem({ data }) {
     <>
       <div className="review_item container">
         <div className="user_img">
-          <img src="/data/details/user.png" alt="" />
+          <img src="./xari-bulbul/data/details/user.png" alt="" />
         </div>
         <div className="review_right">
           <div className="review_top">
