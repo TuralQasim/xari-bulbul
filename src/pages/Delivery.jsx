@@ -28,12 +28,12 @@ function Delivery({ products, dinWords }) {
         </div>
         <img
           className="delivery_img1"
-          src="../src/data/homeImages/left_top.png"
+          src="/data/homeImages/left_top.png"
           alt=""
         />
         <img
           className="delivery_img2"
-          src="../src/data/homeImages/right_down.png"
+          src="/data/homeImages/right_down.png"
           alt=""
         />
       </div>
@@ -52,7 +52,7 @@ function Delivery({ products, dinWords }) {
           </div>
           <img
             className="delivery_sect_img"
-            src="../src/data/delivery/delivery_img.png"
+            src="/data/delivery/delivery_img.png"
             alt=""
           />
           <ul>
@@ -69,7 +69,7 @@ function Delivery({ products, dinWords }) {
             <h2>{words.withFlowers}</h2>
           </div>
           <Link to="/catalog">
-            {words.catalog} <img src="../src/icons/arrow_right.svg" alt="" />
+            {words.catalog} <img src="/icons/arrow_right.svg" alt="" />
           </Link>
         </div>
         <div className="products">
@@ -78,7 +78,7 @@ function Delivery({ products, dinWords }) {
           })}
         </div>
         <Link to="/catalog">
-          {words.catalog} <img src="../src/icons/arrow_right.svg" alt="" />
+          {words.catalog} <img src="/icons/arrow_right.svg" alt="" />
         </Link>
       </div>
       <HowWork />

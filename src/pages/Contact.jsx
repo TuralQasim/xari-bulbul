@@ -91,7 +91,7 @@ function Contact({ dispatch, dinWords }) {
   };
   return (
     <>
-      <img src="../src/data/bg/bg_right.png" className="bg_right" alt="" />
+      <img src="/data/bg/bg_right.png" className="bg_right" alt="" />
       <div className="container">
         <h2 className="contact_title">{words.title}</h2>
         <div className="contact_shop">
@@ -103,15 +103,15 @@ function Contact({ dispatch, dinWords }) {
               <h4>{words.phone}</h4>
               <ul className="phones">
                 <li>
-                  <img src="../src/icons/phone.svg" alt="" />
+                  <img src="/icons/phone.svg" alt="" />
                   <Link to="tel:80297177888">051-683-00-63</Link>
                 </li>
                 <li>
-                  <img src="../src/icons/phone.svg" alt="" />
+                  <img src="/icons/phone.svg" alt="" />
                   <Link to="tel:80297177888">051-683-00-63</Link>
                 </li>
                 <li>
-                  <img src="../src/icons/phone.svg" alt="" />
+                  <img src="/icons/phone.svg" alt="" />
                   <Link to="tel:80447833777">051-683-00-63</Link>
                 </li>
               </ul>
@@ -194,7 +194,7 @@ function Contact({ dispatch, dinWords }) {
               className="contact_modal"
               onClick={(e) => e.stopPropagation()}
             >
-              <img src="../src/data/homeImages/left_top.png" alt="" />
+              <img src="/data/homeImages/left_top.png" alt="" />
               <h2>{words.thank}</h2>
               <GrFormClose onClick={closeModal} />
             </motion.div>

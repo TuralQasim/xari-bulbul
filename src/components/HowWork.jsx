@@ -37,16 +37,8 @@ function HowWork({ dinWords }) {
           </div>
         </div>
       </div>
-      <img
-        src="src/data/homeImages/left_top.png"
-        alt=""
-        className="left_top2"
-      />
-      <img
-        src="src/data/homeImages/right_down.png"
-        alt=""
-        className="right_down"
-      />
+      <img src="data/homeImages/left_top.png" alt="" className="left_top2" />
+      <img src="data/homeImages/right_down.png" alt="" className="right_down" />
     </div>
   );
 }

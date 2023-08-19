@@ -56,21 +56,17 @@ function Header({ dispatch, basket, products, staticWords, searchWord }) {
     <header>
       <div className="navbar_header container">
         <Link className="logo" to="/">
-          <img src="../src/icons/logo1.png" alt="" />
+          <img src="/icons/logo1.png" alt="" />
         </Link>
         <div className="cityes">
           <div className="city_dropdown">
-            <img
-              className="location_icon"
-              src="../src/icons/location.svg"
-              alt=""
-            />
+            <img className="location_icon" src="/icons/location.svg" alt="" />
             <h4 className="active_city" onClick={() => setshowCity(!showCity)}>
               {city}
             </h4>
             <img
               className={showCity ? "rotate" : ""}
-              src="../src/icons/arrow_down.svg"
+              src="/icons/arrow_down.svg"
               alt=""
             />
             <AnimatePresence>
@@ -99,7 +95,7 @@ function Header({ dispatch, basket, products, staticWords, searchWord }) {
           </div>
         </div>
         <div className="contacts_768">
-          <img src="../src/icons/phone.svg" alt="" />
+          <img src="/icons/phone.svg" alt="" />
           <h4
             className="phone_dropdown"
             onClick={() => setcontact768(!contact768)}
@@ -107,7 +103,7 @@ function Header({ dispatch, basket, products, staticWords, searchWord }) {
             {words.nomre}
           </h4>
           <img
-            src="../src/icons/arrow_down.svg"
+            src="/icons/arrow_down.svg"
             className={contact768 ? "rotate" : ""}
             style={{ transition: "0.4s" }}
             alt=""
@@ -142,7 +138,7 @@ function Header({ dispatch, basket, products, staticWords, searchWord }) {
           <li className="shop_dropdown">
             {" "}
             <NavLink to="/about">
-              {words.haqqinda} <img src="../src/icons/arrow_down.svg" alt="" />
+              {words.haqqinda} <img src="/icons/arrow_down.svg" alt="" />
             </NavLink>
             <ul>
               <li>
@@ -156,8 +152,7 @@ function Header({ dispatch, basket, products, staticWords, searchWord }) {
           <li className="delivery_dropdown">
             {" "}
             <NavLink to="/delivery">
-              {words.catdirilma}{" "}
-              <img src="../src/icons/arrow_down.svg" alt="" />
+              {words.catdirilma} <img src="/icons/arrow_down.svg" alt="" />
             </NavLink>
             <ul>
               <li>
@@ -179,7 +174,7 @@ function Header({ dispatch, basket, products, staticWords, searchWord }) {
           </li>
           <li className="contact_dropdown">
             <NavLink to="/contact">
-              {words.elaqe} <img src="../src/icons/arrow_down.svg" alt="" />
+              {words.elaqe} <img src="/icons/arrow_down.svg" alt="" />
             </NavLink>
             <ul>
               <li>
@@ -199,16 +194,16 @@ function Header({ dispatch, basket, products, staticWords, searchWord }) {
         </div>
         <div className="contact_icons">
           <Link to="instagram.com">
-            <img src="../src/icons/instagram.svg" alt="" />
+            <img src="/icons/instagram.svg" alt="" />
           </Link>
           <Link to="vkontakte.com">
-            <img src="../src/icons/vkontakte.svg" alt="" />
+            <img src="/icons/vkontakte.svg" alt="" />
           </Link>
           <Link to="telegram.com">
-            <img src="../src/icons/telegram.svg" alt="" />
+            <img src="/icons/telegram.svg" alt="" />
           </Link>
           <Link to="whatsapp.com">
-            <img src="../src/icons/whatsapp.svg" alt="" />
+            <img src="/icons/whatsapp.svg" alt="" />
           </Link>
         </div>
         <Link className="optom" to="/organizations">
@@ -218,7 +213,7 @@ function Header({ dispatch, basket, products, staticWords, searchWord }) {
           <h4 onClick={() => setshowlang(!showlang)}>{lang}</h4>
           <img
             className={showlang ? "rotate" : ""}
-            src="../src/icons/arrow_down.svg"
+            src="/icons/arrow_down.svg"
             alt=""
           />
           <AnimatePresence>
@@ -355,16 +350,16 @@ function Header({ dispatch, basket, products, staticWords, searchWord }) {
                   </div>
                   <div className="contact_icons">
                     <Link to="instagram.com">
-                      <img src="../src/icons/white_instagram.svg" alt="" />
+                      <img src="/icons/white_instagram.svg" alt="" />
                     </Link>
                     <Link to="vk.ru">
-                      <img src="../src/icons/white_vkontakte.svg" alt="" />
+                      <img src="/icons/white_vkontakte.svg" alt="" />
                     </Link>
                     <Link to="telegram.com">
-                      <img src="../src/icons/white_telegram.svg" alt="" />
+                      <img src="/icons/white_telegram.svg" alt="" />
                     </Link>
                     <Link to="whatsapp.com">
-                      <img src="../src/icons/white_whatsapp.svg" alt="" />
+                      <img src="/icons/white_whatsapp.svg" alt="" />
                     </Link>
                   </div>
                   <div className="dropdowns">
@@ -444,24 +439,24 @@ function Header({ dispatch, basket, products, staticWords, searchWord }) {
             </AnimatePresence>
           </div>
           <Link className="logo" to="/">
-            <img src="../src/icons/logo1.png" alt="" />
+            <img src="/icons/logo1.png" alt="" />
           </Link>
           <div className="contacts">
             <div className="contacts_item">
-              <img src="../src/icons/phone.svg" alt="" />
+              <img src="/icons/phone.svg" alt="" />
               <Link to="tel:0516830063">{words.nomre}</Link>
             </div>
             <div className="contacts_item">
-              <img src="../src/icons/phone.svg" alt="" />
+              <img src="/icons/phone.svg" alt="" />
               <Link to="tel:0516830063">{words.nomre}</Link>
             </div>
             <div className="contacts_item">
-              <img src="../src/icons/phone.svg" alt="" />
+              <img src="/icons/phone.svg" alt="" />
               <Link to="tel:0516830063">{words.nomre}</Link>
             </div>
           </div>
           <div className="responsive_contacts">
-            <img src="../src/icons/phone.svg" alt="" />
+            <img src="/icons/phone.svg" alt="" />
             <Link to="tel:0516830063" className="phone_dropdown">
               {words.nomre}
             </Link>
@@ -473,7 +468,7 @@ function Header({ dispatch, basket, products, staticWords, searchWord }) {
                 <Link to="tel:0516830063">{words.nomre}</Link>
               </li>
             </ul>
-            <img src="../src/icons/arrow_down.svg" alt="" />
+            <img src="/icons/arrow_down.svg" alt="" />
           </div>
           <div className="search_input">
             <input
@@ -482,7 +477,7 @@ function Header({ dispatch, basket, products, staticWords, searchWord }) {
               onChange={changeValue}
               placeholder={`${words.searchInputPlaceholder}`}
             />
-            <img src="../src/icons/search.svg" alt="" />
+            <img src="/icons/search.svg" alt="" />
             {searchValue.length || searchWord ? (
               <div className="search_dropdown">
                 {searchProd.length ? (
@@ -504,13 +499,13 @@ function Header({ dispatch, basket, products, staticWords, searchWord }) {
           </div>
           <div className="login">
             <Link to="/login">
-              <img src="../src/icons/user.svg" alt="" />
+              <img src="/icons/user.svg" alt="" />
             </Link>
             <Link to="/favorites">
-              <img src="../src/icons/favorite.svg" alt="" />
+              <img src="/icons/favorite.svg" alt="" />
             </Link>
             <Link className="basket" to="/basket">
-              <img src="../src/icons/basket.svg" alt="" />
+              <img src="/icons/basket.svg" alt="" />
               <h4 className={basket.length ? "basket_around" : ""}>
                 {basket.length ? `(${basket.length})` : "(0)"}
               </h4>

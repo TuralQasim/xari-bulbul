@@ -31,7 +31,7 @@ function Catalog({ categories, products, pricesFilter, dinWords }) {
   });
   return (
     <>
-      <img src="./src/icons/flower_bg.svg" className="flower_cat" alt="" />
+      <img src="/icons/flower_bg.svg" className="flower_cat" alt="" />
       <h1 className="container catalog_title">{words.catalog}</h1>
       <div className="catalog container">
         <div className="filter">

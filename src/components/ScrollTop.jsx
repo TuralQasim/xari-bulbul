@@ -22,7 +22,7 @@ function ScrollTop() {
     <>
       {scroll && (
         <button className="scrollTop" onClick={scrollUp}>
-          <img src="src/icons/scroll.svg" alt="" />
+          <img src="icons/scroll.svg" alt="" />
         </button>
       )}
     </>

@@ -19,7 +19,7 @@ function Home({ categories, products, dinWords }) {
   const words = dinWords.home;
   return (
     <>
-      <img src="./src/icons/flower_bg.svg" className="flower_bg" alt="" />
+      <img src="/icons/flower_bg.svg" className="flower_bg" alt="" />
       <Swiper words={words} />
       <ul className="cats container">
         {categories.map((a) => (
@@ -42,7 +42,7 @@ function Home({ categories, products, dinWords }) {
             </p>
           </div>
           <Link to="/catalog">
-            {words.catalogBtn} <img src="../src/icons/arrow_right.svg" alt="" />
+            {words.catalogBtn} <img src="/icons/arrow_right.svg" alt="" />
           </Link>
         </div>
         <div className="products">
@@ -51,7 +51,7 @@ function Home({ categories, products, dinWords }) {
           })}
         </div>
         <Link to="/catalog">
-          {words.catalogBtn} <img src="../src/icons/arrow_right.svg" alt="" />
+          {words.catalogBtn} <img src="/icons/arrow_right.svg" alt="" />
         </Link>
       </div>
       <Lider />
@@ -61,7 +61,7 @@ function Home({ categories, products, dinWords }) {
             <h2>{words.roseRecommend}</h2>
           </div>
           <Link to="/catalog">
-            {words.catalogBtn} <img src="../src/icons/arrow_right.svg" alt="" />
+            {words.catalogBtn} <img src="/icons/arrow_right.svg" alt="" />
           </Link>
         </div>
         <div className="products">
@@ -70,7 +70,7 @@ function Home({ categories, products, dinWords }) {
           })}
         </div>
         <Link to="/catalog">
-          {words.catalogBtn} <img src="../src/icons/arrow_right.svg" alt="" />
+          {words.catalogBtn} <img src="/icons/arrow_right.svg" alt="" />
         </Link>
       </div>
       <div className="profitable_bg">
@@ -79,48 +79,44 @@ function Home({ categories, products, dinWords }) {
         </div>
         <div className="profitable container">
           <div className="profitable_item">
-            <img src="../src/icons/profitable 1.svg" alt="" />
+            <img src="/icons/profitable 1.svg" alt="" />
             <h2>{words.payOnSite}</h2>
             <p>{words.payP}</p>
           </div>
           <div className="profitable_item">
-            <img src="../src/icons/profitable 2.svg" alt="" />
+            <img src="/icons/profitable 2.svg" alt="" />
             <h2>{words.fastDelivery}</h2>
             <p>{words.deliveryP}</p>
           </div>
           <div className="profitable_item">
-            <img src="../src/icons/profitable 3.svg" alt="" />
+            <img src="/icons/profitable 3.svg" alt="" />
             <h2>{words.deliveryPlace}</h2>
             <p>{words.deliveryDay}</p>
           </div>
           <div className="profitable_item">
-            <img src="../src/icons/profitable 4.svg" alt="" />
+            <img src="/icons/profitable 4.svg" alt="" />
             <h2>{words.onlyFresh}</h2>
             <p>{words.onlyP}</p>
           </div>
           <div className="profitable_item">
-            <img src="../src/icons/profitable 5.svg" alt="" />
+            <img src="/icons/profitable 5.svg" alt="" />
             <h2>{words.tenYear}</h2>
             <p>{words.moreTen}</p>
           </div>
           <div className="profitable_item">
-            <img src="../src/icons/profitable 6.svg" alt="" />
+            <img src="/icons/profitable 6.svg" alt="" />
             <h2>{words.time}</h2>
             <p>{words.support}</p>
           </div>
         </div>
         <img
-          src="../src/data/homeImages/right_top.png"
+          src="/data/homeImages/right_top.png"
           alt=""
           className="right_top"
         />
+        <img src="/data/homeImages/left_top.png" alt="" className="left_top" />
         <img
-          src="../src/data/homeImages/left_top.png"
-          alt=""
-          className="left_top"
-        />
-        <img
-          src="../src/data/homeImages/left_down.png"
+          src="/data/homeImages/left_down.png"
           alt=""
           className="left_down"
         />
@@ -131,7 +127,7 @@ function Home({ categories, products, dinWords }) {
             <h2>{words.buyWithFlow}</h2>
           </div>
           <Link to="/catalog">
-            {words.catalogBtn} <img src="../src/icons/arrow_right.svg" alt="" />
+            {words.catalogBtn} <img src="/icons/arrow_right.svg" alt="" />
           </Link>
         </div>
         <div className="products">
@@ -140,14 +136,14 @@ function Home({ categories, products, dinWords }) {
           })}
         </div>
         <Link to="/catalog">
-          {words.catalogBtn} <img src="../src/icons/arrow_right.svg" alt="" />
+          {words.catalogBtn} <img src="/icons/arrow_right.svg" alt="" />
         </Link>
       </div>
       <div className="only container">
         <h2 className="only_title">{words.onlyH2}</h2>
         <div className="only_hero">
           <div className="only_top">
-            <img src="../src/data/homeImages/only1.png" alt="" />
+            <img src="/data/homeImages/only1.png" alt="" />
             <ul>
               <li>{words.life}</li>
               <li>{words.if}</li>
@@ -158,7 +154,7 @@ function Home({ categories, products, dinWords }) {
               <li>{words.forOrder}</li>
               <li>{words.romantic}</li>
             </ul>
-            <img src="../src/data/homeImages/only2.png" alt="" />
+            <img src="/data/homeImages/only2.png" alt="" />
           </div>
         </div>
       </div>

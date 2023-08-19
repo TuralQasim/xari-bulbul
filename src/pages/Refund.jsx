@@ -23,18 +23,18 @@ function Refund({ dinWords }) {
               </ul>
             </div>
             <img
-              src="../src/data/homeImages/left_top.png"
+              src="/data/homeImages/left_top.png"
               className="refund_left_top"
               alt=""
             />
             <img
-              src="../src/data/homeImages/right_down.png"
+              src="/data/homeImages/right_down.png"
               alt=""
               className="refund_right_down"
             />
-            <img src="../src/icons/spots.svg" className="spots1" alt="" />
-            <img src="../src/icons/spots.svg" className="spots2" alt="" />
-            <img src="../src/icons/spots.svg" className="spots3" alt="" />
+            <img src="/icons/spots.svg" className="spots1" alt="" />
+            <img src="/icons/spots.svg" className="spots2" alt="" />
+            <img src="/icons/spots.svg" className="spots3" alt="" />
           </div>
           <p>
             {words.returnMoney}

@@ -14,7 +14,7 @@ function Pay({ products, dinWords }) {
   ];
   return (
     <>
-      <img src="../src/data/bg/bg_right.png" className="bg_right" alt="" />
+      <img src="/data/bg/bg_right.png" className="bg_right" alt="" />
       <div className="container">
         <h2 className="pay_title">{words.title}</h2>
         <div className="erip">
@@ -26,34 +26,34 @@ function Pay({ products, dinWords }) {
             <h2 className="erip_right_text">{words.recieve}</h2>
             <div className="erip_right_img">
               <div className="erip_item">
-                <img src="../src/icons/pay/mastercard.svg" alt="" />
+                <img src="/icons/pay/mastercard.svg" alt="" />
               </div>
               <div className="erip_item">
-                <img src="../src/icons/pay/maestro.svg" alt="" />
+                <img src="/icons/pay/maestro.svg" alt="" />
               </div>
               <div className="erip_item">
-                <img src="../src/icons/pay/visa.svg" alt="" />
+                <img src="/icons/pay/visa.svg" alt="" />
               </div>
               <div className="erip_item">
-                <img src="../src/icons/pay/belcard.svg" alt="" />
+                <img src="/icons/pay/belcard.svg" alt="" />
               </div>
               <div className="erip_item">
-                <img src="../src/icons/pay/mtbank.png" alt="" />
+                <img src="/icons/pay/mtbank.png" alt="" />
               </div>
               <div className="erip_item">
-                <img src="../src/icons/pay/webmoney.svg" alt="" />
+                <img src="/icons/pay/webmoney.svg" alt="" />
               </div>
               <div className="erip_item">
-                <img src="../src/icons/pay/erip.png" alt="" />
+                <img src="/icons/pay/erip.png" alt="" />
               </div>
               <div className="erip_item">
-                <img src="../src/icons/pay/ipay.png" alt="" />
+                <img src="/icons/pay/ipay.png" alt="" />
               </div>
               <div className="erip_item">
-                <img src="../src/icons/pay/masterSecure.svg" alt="" />
+                <img src="/icons/pay/masterSecure.svg" alt="" />
               </div>
               <div className="erip_item">
-                <img src="../src/icons/pay/verified.svg" alt="" />
+                <img src="/icons/pay/verified.svg" alt="" />
               </div>
             </div>
           </div>
@@ -73,15 +73,15 @@ function Pay({ products, dinWords }) {
             </ul>
           </div>
           <div className="nessesary_img">
-            <img src="../src/icons/nessesary.svg" alt="" />
+            <img src="/icons/nessesary.svg" alt="" />
           </div>
         </div>
         <div className="ipay">
           <h2>{words.ipayTitle}</h2>
           <div className="ipay_hero">
             <div className="ipay_img">
-              <img src="../src/data/pay/ipay1.png" alt="" />
-              <img src="../src/data/pay/ipay2.png" alt="" />
+              <img src="/data/pay/ipay1.png" alt="" />
+              <img src="/data/pay/ipay2.png" alt="" />
             </div>
             <ul className="ipay_text">
               <li>{words.forEnter}</li>
@@ -102,7 +102,7 @@ function Pay({ products, dinWords }) {
             </ul>
           </div>
           <div className="bepay_img">
-            <img src="../src/data/pay/bepay.png" alt="" />
+            <img src="/data/pay/bepay.png" alt="" />
           </div>
         </div>
         <div className="return_money">
@@ -112,8 +112,8 @@ function Pay({ products, dinWords }) {
         <div className="important_bg">
           <h2>{words.important}</h2>
           <p>{words.importantText}</p>
-          <img src="../src/data/homeImages/left_top.png" alt="" />
-          <img src="../src/data/homeImages/right_down.png" alt="" />
+          <img src="/data/homeImages/left_top.png" alt="" />
+          <img src="/data/homeImages/right_down.png" alt="" />
         </div>
         <div className="decor">
           <h2>{words.orderFlowers}</h2>
@@ -124,7 +124,7 @@ function Pay({ products, dinWords }) {
               <p>{words.bouquet}</p>
             </div>
             <div className="decor_img">
-              <img src="../src/data/pay/decor.png" alt="" />
+              <img src="/data/pay/decor.png" alt="" />
             </div>
           </div>
         </div>
@@ -141,7 +141,7 @@ function Pay({ products, dinWords }) {
             <h2>{words.withFlower}</h2>
           </div>
           <Link to="/catalog">
-            {words.catalog} <img src="../src/icons/arrow_right.svg" alt="" />
+            {words.catalog} <img src="/icons/arrow_right.svg" alt="" />
           </Link>
         </div>
         <div className="products">
@@ -154,7 +154,7 @@ function Pay({ products, dinWords }) {
           })}
         </div>
         <Link to="/catalog">
-          {words.catalog} <img src="../src/icons/arrow_right.svg" alt="" />
+          {words.catalog} <img src="/icons/arrow_right.svg" alt="" />
         </Link>
       </div>
       <HowWork />

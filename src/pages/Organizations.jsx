@@ -32,15 +32,15 @@ function Organizations({ dinWords }) {
               <h4>{words.phone}</h4>
               <ul className="phones">
                 <li>
-                  <img src="../src/icons/phone.svg" alt="" />
+                  <img src="/icons/phone.svg" alt="" />
                   <Link to="tel:0516830063">051-683-00-63</Link>
                 </li>
                 <li>
-                  <img src="../src/icons/phone.svg" alt="" />
+                  <img src="/icons/phone.svg" alt="" />
                   <Link to="tel:0516830063">051-683-00-63</Link>
                 </li>
                 <li>
-                  <img src="../src/icons/phone.svg" alt="" />
+                  <img src="/icons/phone.svg" alt="" />
                   <Link to="tel:0516830063">051-683-00-63</Link>
                 </li>
               </ul>
@@ -50,7 +50,7 @@ function Organizations({ dinWords }) {
               <Link to="http/skype.com">xaribulbul</Link>
             </div>
           </div>
-          <img src="../src/data/organization/organization.png" alt="" />
+          <img src="/data/organization/organization.png" alt="" />
         </div>
       </div>
       <Map />

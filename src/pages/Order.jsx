@@ -93,22 +93,22 @@ function Order({ basket, products, dinWords }) {
                   <input type="radio" name="bbb" />
                   {words.card}
                   <div className="card_type">
-                    <img src="../src/icons/pay/mastercard.svg" alt="" />
-                    <img src="../src/icons/pay/visa.svg" alt="" />
-                    <img src="../src/icons/pay/belcard.svg" alt="" />
-                    <img src="../src/icons/pay/masterSecure.svg" alt="" />
-                    <img src="../src/icons/pay/mtbank.png" alt="" />
-                    <img src="../src/icons/pay/verified.svg" alt="" />
+                    <img src="/icons/pay/mastercard.svg" alt="" />
+                    <img src="/icons/pay/visa.svg" alt="" />
+                    <img src="/icons/pay/belcard.svg" alt="" />
+                    <img src="/icons/pay/masterSecure.svg" alt="" />
+                    <img src="/icons/pay/mtbank.png" alt="" />
+                    <img src="/icons/pay/verified.svg" alt="" />
                   </div>
                 </label>
                 <label>
                   <input type="radio" name="bbb" />
                   {words.online}
                   <div className="online_type">
-                    <img src="../src/icons/pay/erip.png" alt="" />
-                    <img src="../src/icons/pay/bepaid.png" alt="" />
-                    <img src="../src/icons/pay/ipay.png" alt="" />
-                    <img src="../src/icons/pay/webmoney.svg" alt="" />
+                    <img src="/icons/pay/erip.png" alt="" />
+                    <img src="/icons/pay/bepaid.png" alt="" />
+                    <img src="/icons/pay/ipay.png" alt="" />
+                    <img src="/icons/pay/webmoney.svg" alt="" />
                   </div>
                 </label>
               </div>

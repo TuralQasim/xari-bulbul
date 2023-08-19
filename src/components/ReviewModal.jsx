@@ -28,7 +28,7 @@ function ReviewModal({ dispatch, reviewModal, words }) {
           className="review_modal"
           onClick={(e) => e.stopPropagation()}
         >
-          <img src="../src/data/homeImages/left_top.png" alt="" />
+          <img src="/data/homeImages/left_top.png" alt="" />
           <h2>{words.thank}</h2>
           <GrFormClose onClick={closeModal} />
         </motion.div>
