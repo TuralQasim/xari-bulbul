@@ -5,7 +5,7 @@ import { GrFormClose } from "react-icons/gr";
 import { AnimatePresence, motion } from "framer-motion";
 
 function Footer({ categories, staticWords, language }) {
-  const words = staticWords[language].footer;
+  const words = staticWords[language]?.footer;
   const [footModal, setFootModal] = useState(false);
   const [value, setValue] = useState("");
   const [place, setPlace] = useState(false);
