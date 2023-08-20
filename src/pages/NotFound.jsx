@@ -3,8 +3,8 @@ import Map from "../components/Map";
 import { Link } from "react-router-dom";
 import { connect } from "react-redux";
 
-function NotFound({ dinWords }) {
-  const words = dinWords.notFound;
+function NotFound({ dinWords,language }) {
+  const words = dinWords[language].notFound;
   return (
     <>
       <div className="container">

@@ -8,8 +8,8 @@ import Product from "../components/Product";
 import Range from "../components/Range";
 import ScrollTop from "../components/ScrollTop";
 
-function Catalog({ categories, products, pricesFilter, dinWords }) {
-  const words = dinWords.catalog;
+function Catalog({ categories, products, pricesFilter, dinWords,language }) {
+  const words = dinWords[language].catalog;
   const [values, setValues] = useState([pricesFilter[0], pricesFilter[1]]);
   const pricesProd = products.filter(
     (a) => a.price > values[0] && a.price < values[1]

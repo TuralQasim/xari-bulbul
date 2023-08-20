@@ -6,8 +6,8 @@ import { Link } from "react-router-dom";
 import Product from "../components/Product";
 import ScrollTop from "../components/ScrollTop";
 
-function Pay({ products, dinWords }) {
-  const words = dinWords.pay;
+function Pay({ products, dinWords,language }) {
+  const words = dinWords[language].pay;
   let eightProd4 = [
     ...products.filter((a) => a.category_id == 2).slice(4, 6),
     ...products.filter((a) => a.category_id == 6).slice(4, 6),

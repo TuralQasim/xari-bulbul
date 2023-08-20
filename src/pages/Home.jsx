@@ -8,7 +8,7 @@ import Reviews from "../components/Reviews";
 import ScrollTop from "../components/ScrollTop";
 import Lider from "../components/Lider";
 
-function Home({ categories, products, dinWords }) {
+function Home({ categories, products, dinWords, language }) {
   let eightProd1 = products.filter((a) => a.category_id == 1).slice(0, 4);
   let eightProd3 = products.filter((a) => a.category_id == 8).slice(0, 4);
   let eightProd4 = [
@@ -16,7 +16,7 @@ function Home({ categories, products, dinWords }) {
     ...products.filter((a) => a.category_id == 6).slice(1, 3),
     ...products.filter((a) => a.category_id == 2).slice(4, 5),
   ];
-  const words = dinWords.home;
+  const words = dinWords[language].home;
   return (
     <>
       <img src="./icons/flower_bg.svg" className="flower_bg" alt="" />

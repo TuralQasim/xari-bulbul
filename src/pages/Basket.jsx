@@ -5,8 +5,8 @@ import { Link } from "react-router-dom";
 import BasketItem from "../components/BasketItem";
 import ScrollTop from "../components/ScrollTop";
 
-function Basket({ products, basket, dinWords }) {
-  const words = dinWords.basket;
+function Basket({ products, basket, dinWords, language }) {
+  const words = dinWords[language].basket;
   let basketProd = [];
   if (basket.length) {
     basket.map((a) => {

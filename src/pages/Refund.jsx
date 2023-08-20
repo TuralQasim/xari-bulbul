@@ -3,8 +3,8 @@ import Map from "../components/Map";
 import ScrollTop from "../components/ScrollTop";
 import { connect } from "react-redux";
 
-function Refund({ dinWords }) {
-  const words = dinWords.refund;
+function Refund({ dinWords,language }) {
+  const words = dinWords[language].refund;
   return (
     <>
       <div className="container">

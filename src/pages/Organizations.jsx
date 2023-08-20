@@ -4,8 +4,8 @@ import { Link } from "react-router-dom";
 import ScrollTop from "../components/ScrollTop";
 import { connect } from "react-redux";
 
-function Organizations({ dinWords }) {
-  const words = dinWords.organization;
+function Organizations({ dinWords,language }) {
+  const words = dinWords[language].organization;
   return (
     <>
       <div className="container">

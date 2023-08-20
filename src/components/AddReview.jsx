@@ -3,8 +3,8 @@ import { useState } from "react";
 import { FaTrashAlt } from "react-icons/fa";
 import { connect } from "react-redux";
 
-function AddReview({ id, reviewModal, dispatch, dinWords }) {
-  const words = dinWords.review;
+function AddReview({ id, reviewModal, dispatch, dinWords, language }) {
+  const words = dinWords[language].review;
   const [name, setName] = useState({
     value: "",
     isError: "",

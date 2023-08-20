@@ -2,8 +2,8 @@ import React from "react";
 import { Link } from "react-router-dom";
 import { connect } from "react-redux";
 
-function Lider({ dinWords, dispatch }) {
-  const words = dinWords.lider;
+function Lider({ dinWords, dispatch, language }) {
+  const words = dinWords[language].lider;
   const searchCheck = (e) => {
     dispatch({
       type: "SEARCH_WORD",

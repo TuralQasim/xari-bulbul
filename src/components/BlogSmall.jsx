@@ -2,8 +2,8 @@ import React from "react";
 import { Link } from "react-router-dom";
 import { connect } from "react-redux";
 
-function BlogSmall({ dinWords }) {
-  const words = dinWords.blog;
+function BlogSmall({ dinWords,language }) {
+  const words = dinWords[language].blog;
 
   return (
     <div className="blog_small">

@@ -4,8 +4,8 @@ import HelpAcc from "../components/HelpAcc";
 import ScrollTop from "../components/ScrollTop";
 import { connect } from "react-redux";
 
-function Help({ dinWords }) {
-  const words = dinWords.help;
+function Help({ dinWords,language }) {
+  const words = dinWords[language].help;
   return (
     <>
       <div className="container">

@@ -2,8 +2,8 @@ import React, { useState } from "react";
 import { connect } from "react-redux";
 import { Link } from "react-router-dom";
 
-function Product({ data, images, favorite, dispatch, basket, dinWords }) {
-  const words = dinWords.product;
+function Product({ data, images, favorite, dispatch, basket, dinWords, language }) {
+  const words = dinWords[language].product;
   let inBasket = basket.includes(data?.id);
   let src = images.find((a) => a.id == data?.id);
   let inFav = favorite.includes(data?.id);

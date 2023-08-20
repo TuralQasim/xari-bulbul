@@ -1,7 +1,7 @@
 import { connect } from "react-redux";
 
-function HowWork({ dinWords }) {
-  const words = dinWords.howWork;
+function HowWork({ dinWords, language }) {
+  const words = dinWords[language].howWork;
   return (
     <div className="how_work_bg">
       <div className="how_work container">

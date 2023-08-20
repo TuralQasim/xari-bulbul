@@ -3,8 +3,8 @@ import Map from "../components/Map";
 import ScrollTop from "../components/ScrollTop";
 import { connect } from "react-redux";
 
-function Guarantee({ dinWords }) {
-  const words = dinWords.guarantee;
+function Guarantee({ dinWords,language }) {
+  const words = dinWords[language].guarantee;
   return (
     <>
       <div className="container">

@@ -4,8 +4,8 @@ import { Link } from "react-router-dom";
 import { connect } from "react-redux";
 import ScrollTop from "../components/ScrollTop";
 
-function Order({ basket, products, dinWords }) {
-  const words = dinWords.order;
+function Order({ basket, products, dinWords,language }) {
+  const words = dinWords[language].order;
   let basketProd = [];
   if (basket.length) {
     basket.map((a) => {

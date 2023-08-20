@@ -5,9 +5,9 @@ import { connect } from "react-redux";
 import Product from "../components/Product";
 import ScrollTop from "../components/ScrollTop";
 
-function Favorites({ favorite, products, dinWords }) {
+function Favorites({ favorite, products, dinWords,language }) {
   let favProd = [];
-  const words = dinWords.favorites;
+  const words = dinWords[language].favorites;
   if (favorite.length) {
     favorite.map((a) => {
       products.map((b) => {

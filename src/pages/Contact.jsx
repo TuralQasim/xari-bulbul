@@ -7,8 +7,8 @@ import { GrFormClose } from "react-icons/gr";
 import { AnimatePresence, motion } from "framer-motion";
 import ScrollTop from "../components/ScrollTop";
 
-function Contact({ dispatch, dinWords }) {
-  const words = dinWords.contact;
+function Contact({ dispatch, dinWords,language }) {
+  const words = dinWords[language].contact;
   const [inputData, setInputData] = useState({
     name: "",
     email: "",

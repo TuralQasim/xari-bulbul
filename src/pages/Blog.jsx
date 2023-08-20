@@ -6,8 +6,8 @@ import BlogSmall from "../components/BlogSmall";
 import BlogBig from "../components/BlogBig";
 import ScrollTop from "../components/ScrollTop";
 
-function Blog({ dinWords }) {
-  const words = dinWords.blog;
+function Blog({ dinWords, language }) {
+  const words = dinWords[language].blog;
   return (
     <>
       <img src="./data/bg/bg_right.png" className="bg_right" alt="" />

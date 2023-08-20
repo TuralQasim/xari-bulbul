@@ -7,8 +7,8 @@ import ReviewItem from "../components/ReviewItem";
 import { useState } from "react";
 import ScrollTop from "../components/ScrollTop";
 
-function Reviews({ reviewModal, reviews, dinWords }) {
-  const words = dinWords.review;
+function Reviews({ reviewModal, reviews, dinWords,language }) {
+  const words = dinWords[language].review;
   const [reviewCount, setreviewCount] = useState([...reviews.slice(-3)]);
   return (
     <>

@@ -8,9 +8,9 @@ import { IoMdArrowDropdown } from "react-icons/io";
 import { GoLocation } from "react-icons/go";
 import SearchItem from "./SearchItem";
 
-function Header({ dispatch, basket, products, staticWords, searchWord }) {
+function Header({ dispatch, basket, products, staticWords, searchWord,language }) {
   const [lang, setLang] = useState("AZ");
-  const words = staticWords[`${lang}`].header;
+  const words = staticWords[language].header;
   const [city, setcity] = useState(words.may28);
   const [showlang, setshowlang] = useState(false);
   const [showCity, setshowCity] = useState(false);
@@ -32,10 +32,10 @@ function Header({ dispatch, basket, products, staticWords, searchWord }) {
       type: "CHANGE_LANG",
       payload: e.target.dataset.value,
     });
-    dispatch({
-      type: "LOAD",
-      payload: true,
-    });
+    // dispatch({
+    //   type: "LOAD",
+    //   payload: false,
+    // });
   };
   const [searchValue, setSearchValue] = useState("");
   const changeValue = (e) => {
@@ -426,9 +426,9 @@ function Header({ dispatch, basket, products, staticWords, searchWord }) {
                               opacity: 0,
                             }}
                           >
-                            <li data-value="en-EN">EN</li>
-                            <li data-value="ru-RU">RU</li>
-                            <li data-value="az-AZ">AZ</li>
+                            <li data-value="EN">EN</li>
+                            <li data-value="RU">RU</li>
+                            <li data-value="AZ">AZ</li>
                           </motion.ul>
                         )}
                       </AnimatePresence>

@@ -21,8 +21,9 @@ function Details({
   dispatch,
   basket,
   dinWords,
+  language
 }) {
-  const words = dinWords.details;
+  const words = dinWords[language].details;
   let eightProd4 = [
     ...products.filter((a) => a.category_id == 2).slice(5, 6),
     ...products.filter((a) => a.category_id == 6).slice(1, 4),

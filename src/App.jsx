@@ -189,14 +189,14 @@ function App({ dispatch, language, load }) {
         let data = res.data.dinWords;
         dispatch({
           type: "DINAMIC_WORDS",
-          payload: data[language],
+          payload: data,
         });
       });
     dispatch({
       type: "LOAD",
       payload: !load,
     });
-  }, [language]);
+  }, []);
   return (
     <>
       <Header />

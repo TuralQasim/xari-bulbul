@@ -4,8 +4,8 @@ import { Link } from "react-router-dom";
 import { connect } from "react-redux";
 import ScrollTop from "../components/ScrollTop";
 
-function Login({ users, dinWords }) {
-  const words = dinWords.login;
+function Login({ users, dinWords,language }) {
+  const words = dinWords[language].login;
   console.log(users);
   const [empty, setEmpty] = useState(false);
   const [log, setLog] = useState({

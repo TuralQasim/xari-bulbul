@@ -6,12 +6,12 @@ import { Link } from "react-router-dom";
 import Product from "../components/Product";
 import ScrollTop from "../components/ScrollTop";
 
-function Delivery({ products, dinWords }) {
+function Delivery({ products, dinWords,language }) {
   let eightProd4 = [
     ...products.filter((a) => a.category_id == 2).slice(4, 6),
     ...products.filter((a) => a.category_id == 6).slice(4, 6),
   ];
-  const words = dinWords.delivery;
+  const words = dinWords[language].delivery;
   return (
     <>
       <div className="container">

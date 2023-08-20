@@ -5,12 +5,12 @@ import { Link } from "react-router-dom";
 import Product from "../components/Product";
 import ScrollTop from "../components/ScrollTop";
 
-function About({ products, dinWords }) {
+function About({ products, dinWords, language }) {
   let eightProd4 = [
     ...products.filter((a) => a.category_id == 2).slice(4, 6),
     ...products.filter((a) => a.category_id == 6).slice(4, 6),
   ];
-  const words = dinWords.about;
+  const words = dinWords[language].about;
   return (
     <>
       <img src="./data/bg/bg_right.png" className="bg_right" alt="" />

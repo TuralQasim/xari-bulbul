@@ -4,8 +4,8 @@ import { connect } from "react-redux";
 import StarRating from "../components/StarRating";
 import { Link } from "react-router-dom";
 
-function Reviews({ reviews, dinWords }) {
-  const words = dinWords.reviewComp;
+function Reviews({ reviews, dinWords, language }) {
+  const words = dinWords[language].reviewComp;
   const onlyFive = reviews.filter((a) => a.stars == 4).slice(1, 4);
   return (
     <div className="reviews ">
