@@ -1,4 +1,4 @@
-import React, { useState } from "react";
+import React, { useEffect, useState, useRef } from "react";
 import { connect } from "react-redux";
 import HowWork from "../components/HowWork";
 import Map from "../components/Map";
@@ -9,11 +9,21 @@ import Range from "../components/Range";
 import ScrollTop from "../components/ScrollTop";
 import { GoChevronDown } from "react-icons/go";
 import { AnimatePresence, motion } from "framer-motion";
+import { useClickOutSide } from "../hooks/useClickOutSide";
 
-function Catalog({ categories, products, pricesFilter, dinWords, language }) {
+function Catalog({
+  categories,
+  products,
+  pricesFilter,
+  dinWords,
+  language,
+  linkCat,
+  dispatch,
+}) {
   const words = dinWords[language].catalog;
+  const sortRef = useRef(null);
   const forSorting = (arr) => {
-    if (sort == "алфавиту") {
+    if (sort == words.sortItem1) {
       const a = arr.sort((a, b) => {
         const c = a.title;
         const d = b.title;
@@ -26,7 +36,7 @@ function Catalog({ categories, products, pricesFilter, dinWords, language }) {
         return 0;
       });
       return a;
-    } else if (sort == "цене(по возрастанию)") {
+    } else if (sort == words.sortItem2) {
       const a = arr.sort((a, b) => {
         return a.price - b.price;
       });
@@ -39,14 +49,27 @@ function Catalog({ categories, products, pricesFilter, dinWords, language }) {
     }
   };
   const [values, setValues] = useState([pricesFilter[0], pricesFilter[1]]);
-  const [sort, setSort] = useState("алфавиту");
+  const [sort, setSort] = useState(words.sortItem1);
+  useEffect(() => {
+    setSort(words.sortItem1);
+  }, [language]);
   const [sortOpen, setSortOpen] = useState(false);
-  const beforePricesProd = products.filter(
-    (a) => a.price > values[0] && a.price < values[1]
-  );
+  const beforePricesProd = products.filter((a) => {
+    if (linkCat) {
+      return (
+        a.category_id == linkCat && a.price > values[0] && a.price < values[1]
+      );
+    } else {
+      return a.price > values[0] && a.price < values[1];
+    }
+  });
   const pricesProd = forSorting(beforePricesProd);
   const [checkedCat, setCheckedCat] = useState([]);
   const getCategory = (e) => {
+    dispatch({
+      type: "CHECK_CAT",
+      payload: "",
+    });
     if (e.target.checked == true) {
       setCheckedCat((arr) => [...arr, +e.target.value]);
     } else {
@@ -54,14 +77,25 @@ function Catalog({ categories, products, pricesFilter, dinWords, language }) {
     }
   };
   const beforeCatProd = products.filter((a) => {
-    return (
-      checkedCat.includes(a.category_id) &&
-      a.price > values[0] &&
-      a.price < values[1]
-    );
+    if (linkCat) {
+      return (
+        a.category_id == linkCat && a.price > values[0] && a.price < values[1]
+      );
+    } else {
+      return (
+        checkedCat.includes(a.category_id) &&
+        a.price > values[0] &&
+        a.price < values[1]
+      );
+    }
   });
-  const catProd = forSorting(beforeCatProd);
 
+  const catProd = forSorting(beforeCatProd);
+  useClickOutSide(sortRef, () => {
+    if (sortOpen) {
+      setSortOpen(false);
+    }
+  });
   return (
     <>
       <img src="./icons/flower_bg.svg" className="flower_cat" alt="" />
@@ -75,12 +109,7 @@ function Catalog({ categories, products, pricesFilter, dinWords, language }) {
                 <li key={a?.id}>
                   <label>
                     {" "}
-                    <input
-                      type="checkbox"
-                      // checked = {Array.includes(a.category) ? true : false}
-                      onClick={getCategory}
-                      value={a.id}
-                    />
+                    <input type="checkbox" onClick={getCategory} value={a.id} />
                     {a?.category}
                   </label>
                 </li>
@@ -94,7 +123,7 @@ function Catalog({ categories, products, pricesFilter, dinWords, language }) {
           <div className="cataloq_products_hero">
             <div className="sorting">
               <p>
-                Сортиворать по:{" "}
+                {words.sorting}{" "}
                 <button onClick={() => setSortOpen(!sortOpen)}>
                   {sort} <GoChevronDown />
                 </button>
@@ -112,40 +141,43 @@ function Catalog({ categories, products, pricesFilter, dinWords, language }) {
                       y: 20,
                     }}
                     className="sort_dropdown"
+                    ref={sortRef}
                   >
                     <p
-                      className={sort == "алфавиту" ? "sortP" : "notSort"}
+                      className={
+                        sort == `${words.sortItem1}` ? "sortP" : "notSort"
+                      }
                       onClick={() => {
-                        setSort("алфавиту"), setSortOpen(false);
+                        setSort(words.sortItem1), setSortOpen(false);
                       }}
                     >
-                      алфавиту
+                      {words.sortItem1}
                     </p>
                     <p
                       className={
-                        sort == "цене(по возрастанию)" ? "sortP" : "notSort"
+                        sort == `${words.sortItem2}` ? "sortP" : "notSort"
                       }
                       onClick={() => {
-                        setSort("цене(по возрастанию)"), setSortOpen(false);
+                        setSort(words.sortItem2), setSortOpen(false);
                       }}
                     >
-                      цене(по возрастанию)
+                      {words.sortItem2}
                     </p>
                     <p
                       className={
-                        sort == "цене(по убыванию)" ? "sortP" : "notSort"
+                        sort == `${words.sortItem3}` ? "sortP" : "notSort"
                       }
                       onClick={() => {
-                        setSort("цене(по убыванию)"), setSortOpen(false);
+                        setSort(words.sortItem3), setSortOpen(false);
                       }}
                     >
-                      цене(по убыванию)
+                      {words.sortItem3}
                     </p>
                   </motion.ul>
                 </AnimatePresence>
               )}
             </div>
-            {checkedCat.length ? (
+            {checkedCat.length || linkCat ? (
               catProd.length ? (
                 catProd.map((a) => {
                   return <Product key={a.id} data={a} />;

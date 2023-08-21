@@ -19,7 +19,7 @@ function Reviews({ reviews, dinWords, language }) {
         {onlyFive.map((a) => {
           return (
             <div key={a.id} className="review1">
-              <img src="data/homeImages/review1.png" alt="" />
+              <img src="./data/homeImages/review1.png" alt="" />
               <h2 className="review_name">{a.user}</h2>
               <p>{a.content}</p>
               <StarRating rating={a.stars} />

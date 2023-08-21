@@ -21,6 +21,7 @@ function Details({
   dispatch,
   basket,
   dinWords,
+  images,
   language
 }) {
   const words = dinWords[language].details;

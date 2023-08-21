@@ -6,7 +6,6 @@ import ScrollTop from "../components/ScrollTop";
 
 function Login({ users, dinWords,language }) {
   const words = dinWords[language].login;
-  console.log(users);
   const [empty, setEmpty] = useState(false);
   const [log, setLog] = useState({
     login: "",

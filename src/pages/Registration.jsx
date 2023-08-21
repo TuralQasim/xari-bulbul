@@ -4,7 +4,7 @@ import { useState } from "react";
 import ScrollTop from "../components/ScrollTop";
 import { connect } from "react-redux";
 
-function Registration({ dinWords,language }) {
+function Registration({ dinWords, language }) {
   const words = dinWords[language].registration;
   const [err, setErr] = useState(false);
   const [regInfo, setRegInfo] = useState({

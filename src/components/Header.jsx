@@ -1,4 +1,4 @@
-import React, { useState, useEffect } from "react";
+import React, { useState, useEffect, useRef } from "react";
 import { AnimatePresence, motion } from "framer-motion";
 import { Link, NavLink } from "react-router-dom";
 import { connect } from "react-redux";
@@ -7,8 +7,19 @@ import { GrFormClose } from "react-icons/gr";
 import { IoMdArrowDropdown } from "react-icons/io";
 import { GoLocation } from "react-icons/go";
 import SearchItem from "./SearchItem";
+import { useClickOutSide } from "../hooks/useClickOutSide";
 
-function Header({ dispatch, basket, products, staticWords, searchWord,language }) {
+function Header({
+  dispatch,
+  basket,
+  products,
+  staticWords,
+  searchWord,
+  language,
+}) {
+  const cityRef = useRef(null);
+  const langRef = useRef(null);
+  const searchRef = useRef(null);
   const [lang, setLang] = useState("AZ");
   const words = staticWords[language].header;
   const [city, setcity] = useState(words.may28);
@@ -32,10 +43,6 @@ function Header({ dispatch, basket, products, staticWords, searchWord,language }
       type: "CHANGE_LANG",
       payload: e.target.dataset.value,
     });
-    // dispatch({
-    //   type: "LOAD",
-    //   payload: false,
-    // });
   };
   const [searchValue, setSearchValue] = useState("");
   const changeValue = (e) => {
@@ -51,6 +58,19 @@ function Header({ dispatch, basket, products, staticWords, searchWord,language }
     } else {
       return a.title.includes(searchValue);
     }
+  });
+  useClickOutSide(cityRef, () => {
+    if (showCity) {
+      setshowCity(false);
+    }
+  });
+  useClickOutSide(langRef, () => {
+    if (showlang) {
+      setshowlang(false);
+    }
+  });
+  useClickOutSide(searchRef, () => {
+    setSearchValue("");
   });
   return (
     <header>
@@ -85,6 +105,7 @@ function Header({ dispatch, basket, products, staticWords, searchWord,language }
                     opacity: 0,
                   }}
                   onClick={changeCity}
+                  ref={cityRef}
                 >
                   <li>{words.may28}</li>
                   <li>{words.genclik}</li>
@@ -220,6 +241,7 @@ function Header({ dispatch, basket, products, staticWords, searchWord,language }
             {showlang && (
               <motion.ul
                 onClick={changeLang}
+                ref={langRef}
                 initial={{
                   y: 20,
                   opacity: 0,
@@ -394,6 +416,7 @@ function Header({ dispatch, basket, products, staticWords, searchWord,language }
                                 opacity: 0,
                               }}
                               onClick={changeCity}
+                              ref={cityRef}
                             >
                               <li>{words.may28}</li>
                               <li>{words.genclik}</li>
@@ -425,6 +448,7 @@ function Header({ dispatch, basket, products, staticWords, searchWord,language }
                               y: 20,
                               opacity: 0,
                             }}
+                            ref={langRef}
                           >
                             <li data-value="EN">EN</li>
                             <li data-value="RU">RU</li>
@@ -479,7 +503,7 @@ function Header({ dispatch, basket, products, staticWords, searchWord,language }
             />
             <img src="./icons/search.svg" alt="" />
             {searchValue.length || searchWord ? (
-              <div className="search_dropdown">
+              <div className="search_dropdown" ref={searchRef}>
                 {searchProd.length ? (
                   searchProd.map((a) => (
                     <SearchItem

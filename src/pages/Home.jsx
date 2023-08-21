@@ -8,7 +8,7 @@ import Reviews from "../components/Reviews";
 import ScrollTop from "../components/ScrollTop";
 import Lider from "../components/Lider";
 
-function Home({ categories, products, dinWords, language }) {
+function Home({ categories, products, dinWords, language, dispatch }) {
   let eightProd1 = products.filter((a) => a.category_id == 1).slice(0, 4);
   let eightProd3 = products.filter((a) => a.category_id == 8).slice(0, 4);
   let eightProd4 = [
@@ -17,17 +17,26 @@ function Home({ categories, products, dinWords, language }) {
     ...products.filter((a) => a.category_id == 2).slice(4, 5),
   ];
   const words = dinWords[language].home;
+  const lickCatCheck = (e) => {
+    const checkCat = e.target.dataset.value;
+    if (checkCat) {
+      dispatch({
+        type: "CHECK_CAT",
+        payload: checkCat,
+      });
+    }
+  };
   return (
     <>
       <img src="./icons/flower_bg.svg" className="flower_bg" alt="" />
       <Swiper words={words} />
       <ul className="cats container">
         {categories.map((a) => (
-          <li key={a.id}>
+          <li key={a.id} onClick={lickCatCheck} data-value={a.id}>
             <Link to="/catalog">
               {" "}
-              <img src={a.category_icon} alt="" />
-              <p>{a.category}</p>
+              <img src={a.category_icon} alt="" data-value={a.id} />
+              <p data-value={a.id}>{a.category}</p>
             </Link>
           </li>
         ))}

@@ -6,12 +6,13 @@ const initalState = {
   reviews: [],
   load: true,
   reviewModal: false,
-  pricesFilter: [70, 320],
+  pricesFilter: [0, 400],
   Recall: [],
   favorite: [],
   basket: [],
   users: [],
   searchWord: "",
+  linkCat: "",
   staticWords: {
     AZ: {
       header: {
@@ -153,6 +154,8 @@ export default function Reducer(state = initalState, action) {
   switch (action.type) {
     case "CHANGE_LANG":
       return { ...state, language: action.payload };
+    case "CHECK_CAT":
+      return { ...state, linkCat: action.payload };
     case "IMAGES":
       return { ...state, images: action.payload };
     case "PRODUCTS":
