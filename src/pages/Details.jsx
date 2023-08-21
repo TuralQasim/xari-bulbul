@@ -22,7 +22,7 @@ function Details({
   basket,
   dinWords,
   images,
-  language
+  language,
 }) {
   const words = dinWords[language].details;
   let eightProd4 = [
@@ -93,10 +93,13 @@ function Details({
           </div>
           <div className="prices">
             <h2 className={data.discount ? "discount" : "dnone"}>
-              {`${data.price * data.count - data.discount * data.count} р.`}
+              {`${(
+                data.price * data.count -
+                data.discount * data.count
+              ).toFixed(2)} р.`}
             </h2>
             <h2 className={data.discount ? "old_price" : "price"}>
-              {`${Math.trunc(data.price * data.count)} р.`}
+              {`${Math.trunc(data.price * data.count).toFixed(2)} р.`}
             </h2>
           </div>
           <div className="detail_operations">

@@ -1,20 +1,23 @@
 import React, { useState } from "react";
 import Accordion from "../components/Accordion";
+import { connect } from "react-redux";
 
-const AccordionList = ({ data, words }) => {
+const AccordionList = ({ data, words, dinWords, language }) => {
   const [open, setOpen] = useState("");
+  const word = dinWords[language].accList;
+  console.log(word);
   return (
     <>
       <Accordion
         words={words}
-        title="Состав"
+        title={word.consist}
         open={open}
         details={data.consist}
         onChange={setOpen}
         imgSrc={"./icons/consist.svg"}
       />
       <Accordion
-        title="Доставка"
+        title={word.delivery}
         words={words}
         open={open}
         details={words.details1}
@@ -22,7 +25,7 @@ const AccordionList = ({ data, words }) => {
         imgSrc={"./icons/consist.svg"}
       />
       <Accordion
-        title="Оплата"
+        title={word.pay}
         words={words}
         open={open}
         details={words.details2}
@@ -31,7 +34,7 @@ const AccordionList = ({ data, words }) => {
       />
       <Accordion
         words={words}
-        title="Правила возврата"
+        title={word.refund}
         open={open}
         details={words.details3}
         onChange={setOpen}
@@ -41,4 +44,5 @@ const AccordionList = ({ data, words }) => {
   );
 };
 
-export default AccordionList;
+const t = (a) => a;
+export default connect(t)(AccordionList);
